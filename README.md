@@ -31,8 +31,10 @@ terraform init
 3. Apply the Terraform configuration:
 terraform apply
 4. To test the API:
+```bash
 API_URL=$(terraform output -raw api_endpoint)
 curl -X POST $API_URL -H "Content-Type: application/json" -d '{"content":"Test item"}'
+```
 5. To clean up:
 terraform destroy
 
