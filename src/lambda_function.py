@@ -5,7 +5,7 @@ import boto3
 from datetime import datetime
 
 # Initialize DynamoDB client
-dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:4566')
+dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:4150')
 table = dynamodb.Table(os.environ['DYNAMODB_TABLE'])
 
 def handler(event, context):

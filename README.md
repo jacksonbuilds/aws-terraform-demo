@@ -41,7 +41,7 @@ terraform destroy
 ## Data Protection Highlight
 In this project, I've implemented server-side encryption for the S3 bucket as a data protection measure. This ensures that any data stored in the bucket is automatically encrypted at rest using AES-256 encryption. This is an important security practice to:
 
-Protect sensitive data at rest
-Meet compliance requirements
-Implement defense-in-depth security
-Protect against unauthorized access if the storage is compromised
+* Protect sensitive data at rest
+* Meet compliance requirements
+* Implement defense-in-depth security
+* Protect against unauthorized access if the storage is compromised

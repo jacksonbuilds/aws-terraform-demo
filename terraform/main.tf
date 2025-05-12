@@ -2,8 +2,8 @@ provider "aws" {
   region = "us-east-1"
   
   # LocalStack configuration
-  access_key = "test"
-  secret_key = "test"
+  access_key = ""
+  secret_key = ""
   
   # Skip authentication for LocalStack
   skip_credentials_validation = true
@@ -12,11 +12,11 @@ provider "aws" {
   
   # LocalStack endpoint
   endpoints {
-    apigateway     = "http://localhost:4566"
-    dynamodb       = "http://localhost:4566"
-    iam            = "http://localhost:4566"
-    lambda         = "http://localhost:4566"
-    s3             = "http://localhost:4566"
+    apigateway     = "http://localhost:4510"
+    dynamodb       = "http://localhost:4510"
+    iam            = "http://localhost:4510"
+    lambda         = "http://localhost:4510"
+    s3             = "http://localhost:4510"
   }
 }
 
@@ -144,7 +144,7 @@ resource "aws_api_gateway_method" "items_post" {
   rest_api_id   = aws_api_gateway_rest_api.api.id
   resource_id   = aws_api_gateway_resource.items_resource.id
   http_method   = "POST"
-  authorization_type = "NONE"
+  authorization = "NONE"  # Changed from authorization_type to authorization
 }
 
 # API Gateway integration
